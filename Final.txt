@@ -1,0 +1,155 @@
+							---------PRIME------------
+package FinalJava;
+
+import java.util.Scanner;
+public class PrimeNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number :");
+        int a = input.nextInt();
+        
+        for (int i = 0; i <=a; i++) {
+            
+        
+        if (i<2) {
+            System.out.println(i +" Not a prime number ");
+            
+        }
+        for (int j = 2; j <= i; j++) {
+            if (j==i) {
+                System.out.println(i +" Prime Number");
+            }
+            else{
+            
+                if (i%j==0) {
+                    System.out.println(i +" not a prime number");
+                    break;
+                    
+                }
+            }
+        }
+    }
+}
+}
+					--------------------------ODD/EVEN-----------------
+public class Odd_Even {
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input your number here : ");
+        int value = input.nextInt();
+        
+        //for EVEN numbers
+        System.out.println("EVEN number is : "); 
+        for(int i=0; i<=value; i++){
+            if(i%2==0){
+                System.out.print(i + ", ");
+            }  
+        }
+        System.out.println("\n");
+        
+        //for ODD numbers
+        System.out.println("ODD number is : "); 
+        for(int i=0; i<=value; i++){
+            if(i%2==1){
+                System.out.print(i + ", ");
+            }  
+        }   
+    }
+}
+					---------------------------Negative------------------
+
+import java.util.Scanner;
+public class NegativeInteger {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num = 0;
+        System.out.println(" Input a number ");
+        for (int i = 0; ; i++) {
+            
+            int val = input.nextInt();
+            
+            if (val<0) {
+                break;
+                
+            }else{
+            num = num+val;
+            }
+        }
+        System.out.println(" "+ num);
+    }
+}
+					-----------------------ARRAY------------------------------
+public class Arraysort {
+    public static void main(String[] args) {
+        int array[][] ={{1,99,91,11,44},{0,10,9,9,11},{3,23,21,5,20},{13,4,45,66,33},{11,0,1,20,56}};
+       
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                for (int k = j+1; k < array[i].length; k++) {
+                    
+                    
+                    if (array[i][j] >array[i][k]) {
+                        int box = array[i][k];
+                        array[i][k]= array[i][j];
+                        array[i][j] = box;
+                        
+                    }
+                }
+                System.out.print(" " + array[i][j]);
+                
+            }
+            System.out.println("  ");
+        }
+        
+}
+
+					----------------------------------------Max/MIN------------------------
+public class MaxMin {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        
+        System.out.println("Input a number ");
+        for (int i = 1; i <=3; i++) {
+            int num = input.nextInt();
+            
+            if (num > max) {
+                max = num;
+
+			---------------------------------------GCD-----------------------------------------------------
+import java.util.*;
+
+public class Greatest_Common_Divisor {
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input 1st number : ");
+        int n1 = input.nextInt();
+        System.out.println("Input 2nd number : ");
+        int n2 = input.nextInt();
+        
+        int GCD = 1; 
+        for(int i=1; i<=n1 && i<=n2; i++){
+            if(n1%i==0 && n2%i==0){
+                GCD = i;
+            }
+        }
+        System.out.println("Greatest Common Divisor is : " + GCD);
+    }
+}
+
+
+                
+            }
+            if (num < min) {
+                min = num;
+                
+            }
+        }
+        System.out.println("Max num " + max);
+        System.out.println("Min num" + min);
+    }
+}
